@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/src/pages/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -16,15 +17,6 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
   Widget _loginPage() {
     return Container(
-//      decoration: BoxDecoration(
-//        color: Colors.white,
-//        image: DecorationImage(
-//          colorFilter: ColorFilter.mode(
-//              Colors.black.withOpacity(0.05), BlendMode.dstATop),
-//          image: const AssetImage("assets/images/mountains.jpg"),
-//          fit: BoxFit.cover,
-//        ),
-//      ),
       child: Column(
         children: <Widget>[
           Container(
@@ -171,7 +163,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                     color: const Color.fromARGB(255, 180, 66, 122),
-                    onPressed: () => {},
+                    onPressed: _onLoginPress(context),
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                         vertical: 20.0,
@@ -249,7 +241,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                 children: <Widget>[
                                   Expanded(
                                     child: FlatButton(
-                                      onPressed: () => {},
+                                      onPressed: _onFacebookPress(context),
                                       padding: const EdgeInsets.only(
                                         top: 20.0,
                                         bottom: 20.0,
@@ -303,7 +295,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                 children: <Widget>[
                                   Expanded(
                                     child: FlatButton(
-                                      onPressed: () => {},
+                                      onPressed: _onGooglePress(context),
                                       padding: const EdgeInsets.only(
                                         top: 20.0,
                                         bottom: 20.0,
@@ -353,4 +345,16 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
       body: _loginPage(),
     );
   }
+
+  _onGooglePress(BuildContext context) => () {
+        Navigator.of(context).pushReplacementNamed(HOME);
+      };
+
+  _onFacebookPress(BuildContext context) => () {
+        Navigator.of(context).pushReplacementNamed(HOME);
+      };
+
+  _onLoginPress(BuildContext context) => () {
+        Navigator.of(context).pushReplacementNamed(HOME);
+      };
 }

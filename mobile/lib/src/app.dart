@@ -10,6 +10,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: routes,
+      initialRoute: LOGIN,
     );
   }
 }

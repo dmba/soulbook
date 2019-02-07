@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile/src/utils/state_mixin.dart';
 
 class HomePage extends StatefulWidget {
   HomePage(this._bloc) : super();
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with StateMixin {
   @override
   void dispose() {
     widget._bloc.dispose();
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter BLoC Demo Home Page'),
+        title: Text(strings.title),
       ),
       body: BlocBuilder<CounterEvent, CounterState>(
         bloc: widget._bloc,
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: widget._bloc.increment,
-        tooltip: 'Increment',
+        tooltip: strings.fabTooltip,
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -41,12 +42,12 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text(
-            'You have pushed the button this many times:',
+          Text(
+            strings.infoMessage,
           ),
           Text(
             '${state.value}',
-            style: Theme.of(context).textTheme.display1,
+            style: themeData.textTheme.display1,
           ),
         ],
       ),

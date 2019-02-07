@@ -10,5 +10,6 @@ class _$CoreModule extends CoreModule {
   void _configureBlocs() {
     final Container container = Container();
     container.registerFactory((c) => CounterBloc());
+    container.registerFactory((c) => IntroBloc());
   }
 }

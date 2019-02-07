@@ -1,1 +1,5 @@
-{}
+{
+  "title": "Flutter BLoC Demo Home Page",
+  "infoMessage": "You have pushed the button this many times:",
+  "fabTooltip": "Increment",
+}

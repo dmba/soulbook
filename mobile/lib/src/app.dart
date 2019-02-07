@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile/generated/i18n.dart';
 import 'package:mobile/src/pages/routes.dart';
+import 'package:mobile/src/utils/non_null_guard.dart';
 
 class App extends StatelessWidget {
   @override
@@ -10,7 +11,8 @@ class App extends StatelessWidget {
         S.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      localeResolutionCallback: S.delegate.resolution(
+      localeResolutionCallback: nonNullGuard(
+        callback: S.delegate.resolution,
         fallback: const Locale('en', ''),
       ),
       title: 'Flutter Demo',

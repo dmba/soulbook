@@ -1,5 +1,6 @@
 import 'package:core/src/blocs/home/home.dart';
 import 'package:core/src/blocs/intro/intro.dart';
+import 'package:core/src/blocs/login/login.dart';
 import 'package:core/src/di/module.dart';
 import 'package:kiwi/kiwi.dart';
 
@@ -17,5 +18,6 @@ abstract class CoreModule implements Module {
 
   @Register.factory(CounterBloc)
   @Register.factory(IntroBloc)
+  @Register.factory(LoginBloc)
   void _configureBlocs();
 }

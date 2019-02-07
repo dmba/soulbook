@@ -11,5 +11,6 @@ class _$CoreModule extends CoreModule {
     final Container container = Container();
     container.registerFactory((c) => CounterBloc());
     container.registerFactory((c) => IntroBloc());
+    container.registerFactory((c) => LoginBloc());
   }
 }

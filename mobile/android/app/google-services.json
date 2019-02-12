@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "57470282770-5haqae8vucimcb6is8cn2kddg583hbqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soulbook.mobile",
+            "certificate_hash": "a8d241b058be3ab72ceadb9c13aa8a0cbc0cb67f"
+          }
+        },
+        {
           "client_id": "57470282770-go0dsvij45a2h0vo75lrshhjtipablsg.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57470282770-go0dsvij45a2h0vo75lrshhjtipablsg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "57470282770-t4d5c169bfbnpogct3v36rs4ohjjpnsr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.soulbook.mobile"
+              }
+            }
+          ]
         },
         "ads_service": {
           "status": 2

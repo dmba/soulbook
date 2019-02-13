@@ -21,9 +21,18 @@ class S implements WidgetsLocalizations {
   @override
   TextDirection get textDirection => TextDirection.ltr;
 
+  String get email => "EMAIL";
   String get fabTooltip => "Increment";
+  String get facebook => "FACEBOOK";
+  String get forgotPassword => "Forgot Password?";
+  String get google => "GOOGLE";
+  String get hintMail => "example@mail.com";
+  String get hintPassword => "********";
   String get infoMessage => "You have pushed the button this many times:";
-  String get title => "Flutter BLoC Demo Home Page";
+  String get login => "LOGIN";
+  String get orConnectWith => "OR CONNECT WITH";
+  String get password => "PASSWORD";
+  String get title => "Soulbook";
 }
 
 class en extends S {

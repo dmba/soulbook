@@ -9,5 +9,7 @@ mixin StateMixin {
 
   ThemeData get themeData => Theme.of(context);
 
+  MediaQueryData get mediaQuery => MediaQuery.of(context);
+
   Injector get injector => Injector.of(context);
 }

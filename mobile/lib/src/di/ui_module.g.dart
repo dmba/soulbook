@@ -7,16 +7,16 @@ part of 'ui_module.dart';
 // **************************************************************************
 
 class _$UiModule extends UiModule {
-  void _configurePages() {
-    final Container container = Container();
-    container.registerFactory((c) => HomePage(c<CounterBloc>(), c<Auth>()));
-    container.registerFactory((c) => IntroPage(c<IntroBloc>()));
-    container.registerFactory((c) => LoginPage(c<LoginBloc>()));
-  }
-
   void _configureAuth() {
     final Container container = Container();
     container.registerFactory((c) =>
         Auth(googleSignIn: c<GoogleSignIn>(), firebaseAuth: c<FirebaseAuth>()));
+  }
+
+  void _configurePages() {
+    final Container container = Container();
+    container.registerFactory((c) => HomePage(c<CounterBloc>(), c<Auth>()));
+    container.registerFactory((c) => IntroPage(c<IntroBloc>()));
+    container.registerFactory((c) => LoginPage(c<LoginBloc>(), c<Auth>()));
   }
 }

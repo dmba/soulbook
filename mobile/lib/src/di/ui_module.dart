@@ -6,6 +6,7 @@ import 'package:mobile/src/pages/home/home.dart';
 import 'package:mobile/src/pages/intro/intro.dart';
 import 'package:mobile/src/pages/login/auth.dart';
 import 'package:mobile/src/pages/login/login.dart';
+import 'package:mobile/src/pages/splash/splash.dart';
 
 part 'package:mobile/src/di/ui_module.g.dart';
 
@@ -32,5 +33,6 @@ abstract class UiModule implements Module {
   @Register.factory(HomePage)
   @Register.factory(IntroPage)
   @Register.factory(LoginPage)
+  @Register.factory(SplashPage)
   void _configurePages();
 }

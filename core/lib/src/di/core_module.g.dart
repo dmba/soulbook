@@ -12,5 +12,11 @@ class _$CoreModule extends CoreModule {
     container.registerFactory((c) => CounterBloc());
     container.registerFactory((c) => IntroBloc());
     container.registerFactory((c) => LoginBloc());
+    container.registerFactory((c) => AuthBloc(c<UserRepo>()));
+  }
+
+  void _configureRepos() {
+    final Container container = Container();
+    container.registerFactory((c) => UserRepo());
   }
 }

@@ -18,5 +18,6 @@ class _$UiModule extends UiModule {
     container.registerFactory((c) => HomePage(c<CounterBloc>(), c<Auth>()));
     container.registerFactory((c) => IntroPage(c<IntroBloc>()));
     container.registerFactory((c) => LoginPage(c<LoginBloc>(), c<Auth>()));
+    container.registerFactory((c) => SplashPage());
   }
 }

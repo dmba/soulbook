@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile/src/model/menu_item.dart';
 import 'package:mobile/src/utils/state_mixin.dart';
+import 'package:mobile/src/widgets/card_item_widget.dart';
 import 'package:mobile/src/widgets/menu_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,34 +17,69 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with StateMixin {
   static num _counter = 1;
+  ScrollController _scrollController;
 
-  get menuItems => <MenuItem>[
-        MenuItem(
-          "Блок 1",
-          "Знакомство",
-          "TASK_DETAILS",
-        ),
-        MenuItem(
-          "Блок 2",
-          "В поисках внутренних ресурсов",
-          "TASK_DETAILS",
-        ),
-        MenuItem(
-          "Блок 3",
-          "Архетипы внутренней семьи",
-          "TASK_DETAILS",
-        ),
-        MenuItem(
-          "Блок 4",
-          "Счастливая Я",
-          "TASK_DETAILS",
-        ),
-        MenuItem(
-          "Блок 5",
-          "Мир отношений",
-          "TASK_DETAILS",
-        ),
-      ];
+  List<MenuItem> _menuItems = <MenuItem>[
+    MenuItem(
+      "Блок 1",
+      "Знакомство",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 2",
+      "В поисках внутренних ресурсов",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 3",
+      "Архетипы внутренней семьи",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 4",
+      "Счастливая Я",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 5",
+      "Мир отношений",
+      "TASK_DETAILS",
+    ),
+  ];
+
+  List<MenuItem> _listItems = <MenuItem>[
+    MenuItem(
+      "Блок 1",
+      "Знакомство",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 2",
+      "В поисках внутренних ресурсов",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 3",
+      "Архетипы внутренней семьи",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 4",
+      "Счастливая Я",
+      "TASK_DETAILS",
+    ),
+    MenuItem(
+      "Блок 5",
+      "Мир отношений",
+      "TASK_DETAILS",
+    ),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
 
   @override
   void dispose() {
@@ -62,7 +98,7 @@ class _HomePageState extends State<HomePage> with StateMixin {
         accountEmail: "dmytro.babiienko@gmail.com",
         accountAvatar:
             "https://lh6.googleusercontent.com/-DGh7XBoUXPA/AAAAAAAAAAI/AAAAAAAAABE/x4XAorr5s5o/s96-c/photo.jpg",
-        menuItems: menuItems,
+        menuItems: _menuItems,
       ),
       body: BlocBuilder<CounterEvent, CounterState>(
         bloc: widget._bloc,
@@ -78,20 +114,15 @@ class _HomePageState extends State<HomePage> with StateMixin {
   }
 
   Widget _counterBuilder(BuildContext context, CounterState state) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            strings.infoMessage,
-          ),
-          Text(
-            '${state.value}',
-            style: themeData.textTheme.display1,
-          ),
-        ],
-      ),
+    return ListView.builder(
+      controller: _scrollController,
+      itemBuilder: _buildItem,
+      itemCount: _listItems.length,
     );
+  }
+
+  Widget _buildItem(BuildContext context, int index) {
+    return CardItemWidget(item: _listItems[index]);
   }
 
   void _onRefresh() => widget._bloc.increment();

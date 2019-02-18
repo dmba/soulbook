@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/src/model/menu_item.dart';
 
@@ -48,6 +49,7 @@ class MenuWidget extends StatelessWidget {
     return (MenuItem item) => ListTile(
           title: Text(item.title),
           subtitle: Text(item.description),
+          leading: const Icon(Icons.chevron_right),
           onTap: () => Navigator.pushNamed(context, item.route),
         );
   }

@@ -29,6 +29,7 @@ class _AppState extends State<App> with StateMixin {
   Widget build(BuildContext context) {
     _initAuthBlock();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         S.delegate,
       ],
@@ -39,7 +40,7 @@ class _AppState extends State<App> with StateMixin {
       ),
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
       routes: routes,
       home: _homeBuilder(),

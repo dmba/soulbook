@@ -20,14 +20,14 @@ class _AppState extends State<App> with StateMixin {
   AuthBloc _authBloc;
 
   @override
-  void initState() {
-    _authBloc = injector.get<AuthBloc>();
-    _authBloc.dispatchAppStart();
-    super.initState();
+  void dispose() {
+    _authBloc.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    _initAuthBlock();
     return MaterialApp(
       localizationsDelegates: const [
         S.delegate,
@@ -44,6 +44,13 @@ class _AppState extends State<App> with StateMixin {
       routes: routes,
       home: _homeBuilder(),
     );
+  }
+
+  void _initAuthBlock() {
+    if (_authBloc == null) {
+      _authBloc = injector.get<AuthBloc>();
+      _authBloc.dispatchAppStart();
+    }
   }
 
   BlocBuilder<AuthEvent, AuthState> _homeBuilder() {

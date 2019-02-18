@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   kiwi: ^0.1.0
-  bloc: ^0.8.3
+  bloc: ^0.9.0
   meta: ^1.1.6
   equatable: ^0.1.6
 

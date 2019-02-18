@@ -4,7 +4,7 @@ import 'package:mobile/src/pages/home/home.dart';
 import 'package:mobile/src/pages/intro/intro.dart';
 import 'package:mobile/src/pages/login/login.dart';
 
-const HOME = '/';
+const HOME = '/home';
 const INTRO = '/intro';
 const LOGIN = '/login';
 

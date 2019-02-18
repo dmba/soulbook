@@ -236,7 +236,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
   _onGooglePress(BuildContext context) {
     return () async {
       final firebaseUser = await widget._auth.signInWithGoogle();
-      Navigator.of(context).popAndPushNamed(HOME);
+      Navigator.of(context).pushReplacementNamed(HOME);
     };
   }
 

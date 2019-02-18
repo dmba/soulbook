@@ -15,7 +15,7 @@ class _$UiModule extends UiModule {
 
   void _configurePages() {
     final Container container = Container();
-    container.registerFactory((c) => HomePage(c<CounterBloc>(), c<Auth>()));
+    container.registerFactory((c) => HomePage(c<CounterBloc>()));
     container.registerFactory((c) => IntroPage(c<IntroBloc>()));
     container.registerFactory((c) => LoginPage(c<LoginBloc>(), c<Auth>()));
     container.registerFactory((c) => SplashPage());

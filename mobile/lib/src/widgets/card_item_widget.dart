@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:mobile/src/model/menu_item.dart';
 
 class CardItemWidget extends StatelessWidget {
-  const CardItemWidget({Key key, this.item}) : super(key: key);
+  const CardItemWidget({Key key, this.item, this.onClick}) : super(key: key);
 
   final MenuItem item;
+  final Function onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -55,10 +56,7 @@ class CardItemWidget extends StatelessWidget {
         ],
       ),
       trailing: const Icon(Icons.keyboard_arrow_right, size: 30.0),
-      onTap: () {
-//        Navigator.push(
-//            context, MaterialPageRoute(builder: (context) => DetailPage()));
-      },
+      onTap: onClick,
     );
   }
 

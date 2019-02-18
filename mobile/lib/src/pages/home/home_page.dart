@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile/src/model/menu_item.dart';
+import 'package:mobile/src/pages/routes.dart';
 import 'package:mobile/src/utils/state_mixin.dart';
 import 'package:mobile/src/widgets/card_item_widget.dart';
 import 'package:mobile/src/widgets/menu_widget.dart';
@@ -99,6 +100,7 @@ class _HomePageState extends State<HomePage> with StateMixin {
         accountAvatar:
             "https://lh6.googleusercontent.com/-DGh7XBoUXPA/AAAAAAAAAAI/AAAAAAAAABE/x4XAorr5s5o/s96-c/photo.jpg",
         menuItems: _menuItems,
+        onClick: () => Navigator.of(context).pushNamed(DETAILS),
       ),
       body: BlocBuilder<CounterEvent, CounterState>(
         bloc: widget._bloc,
@@ -122,7 +124,10 @@ class _HomePageState extends State<HomePage> with StateMixin {
   }
 
   Widget _buildItem(BuildContext context, int index) {
-    return CardItemWidget(item: _listItems[index]);
+    return CardItemWidget(
+      item: _listItems[index],
+      onClick: () => Navigator.of(context).pushNamed(DETAILS),
+    );
   }
 
   void _onRefresh() => widget._bloc.increment();

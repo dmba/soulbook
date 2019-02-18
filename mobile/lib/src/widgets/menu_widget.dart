@@ -9,12 +9,14 @@ class MenuWidget extends StatelessWidget {
     @required this.accountEmail,
     @required this.accountAvatar,
     @required this.menuItems,
+    @required this.onClick,
   }) : super(key: key);
 
   final String accountName;
   final String accountEmail;
   final String accountAvatar;
   final List<MenuItem> menuItems;
+  final Function onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,7 @@ class MenuWidget extends StatelessWidget {
           title: Text(item.title),
           subtitle: Text(item.description),
           leading: const Icon(Icons.chevron_right),
-          onTap: () => Navigator.pushNamed(context, item.route),
+          onTap: onClick,
         );
   }
 }

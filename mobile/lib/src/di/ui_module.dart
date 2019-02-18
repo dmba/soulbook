@@ -2,11 +2,14 @@ import 'package:core/core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:kiwi/kiwi.dart';
+import 'package:mobile/src/pages/details/details.dart';
 import 'package:mobile/src/pages/home/home.dart';
 import 'package:mobile/src/pages/intro/intro.dart';
 import 'package:mobile/src/pages/login/auth.dart';
 import 'package:mobile/src/pages/login/login.dart';
 import 'package:mobile/src/pages/splash/splash.dart';
+
+export 'package:mobile/src/pages/details/details_page.dart';
 
 part 'package:mobile/src/di/ui_module.g.dart';
 
@@ -34,5 +37,6 @@ abstract class UiModule implements Module {
   @Register.factory(IntroPage)
   @Register.factory(LoginPage)
   @Register.factory(SplashPage)
+  @Register.factory(DetailsPage)
   void _configurePages();
 }

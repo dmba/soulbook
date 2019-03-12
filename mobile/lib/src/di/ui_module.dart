@@ -1,7 +1,10 @@
-import 'package:core/core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:kiwi/kiwi.dart';
+import 'package:mobile/src/blocs/home/home.dart';
+import 'package:mobile/src/blocs/intro/intro.dart';
+import 'package:mobile/src/blocs/login/login.dart';
+import 'package:mobile/src/di/module.dart';
 import 'package:mobile/src/pages/home/home.dart';
 import 'package:mobile/src/pages/intro/intro.dart';
 import 'package:mobile/src/pages/login/auth.dart';

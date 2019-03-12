@@ -1,6 +1,6 @@
-import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile/src/blocs/home/home.dart';
 import 'package:mobile/src/model/menu_item.dart';
 import 'package:mobile/src/utils/state_mixin.dart';
 import 'package:mobile/src/widgets/card_item_widget.dart';

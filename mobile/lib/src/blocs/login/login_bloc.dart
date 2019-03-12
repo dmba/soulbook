@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:core/src/blocs/login/login.dart';
+import 'package:mobile/src/blocs/login/login.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   @override

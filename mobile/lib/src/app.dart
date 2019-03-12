@@ -1,7 +1,7 @@
-import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile/generated/i18n.dart';
+import 'package:mobile/src/blocs/auth/auth.dart';
 import 'package:mobile/src/pages/home/home.dart';
 import 'package:mobile/src/pages/intro/intro.dart';
 import 'package:mobile/src/pages/login/login.dart';

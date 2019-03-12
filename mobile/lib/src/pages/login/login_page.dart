@@ -1,5 +1,5 @@
-import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile/src/blocs/login/login.dart';
 import 'package:mobile/src/pages/login/auth.dart';
 import 'package:mobile/src/pages/routes.dart';
 import 'package:mobile/src/utils/state_mixin.dart';

@@ -1,0 +1,14 @@
+{
+  "title": "Soulbook",
+  "infoMessage": "You have pushed the button this many times:",
+  "fabTooltip": "Increment",
+  "email": "EMAIL",
+  "hintMail": "example@mail.com",
+  "password": "PASSWORD",
+  "hintPassword": "********",
+  "forgotPassword": "Forgot Password?",
+  "login": "LOGIN",
+  "orConnectWith": "OR CONNECT WITH",
+  "google": "GOOGLE",
+  "facebook": "FACEBOOK"
+}

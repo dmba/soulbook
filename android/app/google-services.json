@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "57470282770",
+    "firebase_url": "https://soulbook.firebaseio.com",
+    "project_id": "soulbook",
+    "storage_bucket": "soulbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57470282770:android:b515b7094e88f0e6",
+        "android_client_info": {
+          "package_name": "com.soulbook.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57470282770-5haqae8vucimcb6is8cn2kddg583hbqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soulbook.mobile",
+            "certificate_hash": "a8d241b058be3ab72ceadb9c13aa8a0cbc0cb67f"
+          }
+        },
+        {
+          "client_id": "57470282770-go0dsvij45a2h0vo75lrshhjtipablsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdiwdvpCzkELYdNZ5TrSsIeab8caHD90w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57470282770-go0dsvij45a2h0vo75lrshhjtipablsg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "57470282770-t4d5c169bfbnpogct3v36rs4ohjjpnsr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.soulbook.mobile"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

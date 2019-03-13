@@ -1,4 +1,4 @@
-name: mobile
+name: soulbook
 description: A new Flutter project.
 
 version: 1.0.0+1
@@ -10,9 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
   kiwi: ^0.1.0
+  bloc: ^0.9.5
   flutter_bloc: 0.6.0
   meta: ^1.1.6
   equatable: ^0.1.6
+  firebase_auth: ^0.6.6
+  google_sign_in: ^3.2.4
 
 dev_dependencies:
   flutter_test:
@@ -20,9 +23,6 @@ dev_dependencies:
   mockito: ^3.0.0
   build_runner: ^0.10.1
   kiwi_generator: ^0.1.1
-
-  firebase_auth: ^0.6.6
-  google_sign_in: ^3.2.4
 
 flutter:
   uses-material-design: true

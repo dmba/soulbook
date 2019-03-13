@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:mobile/src/blocs/intro/intro.dart';
+import 'package:soulbook/src/blocs/intro/intro.dart';
 
 class IntroBloc extends Bloc<IntroEvent, IntroState> {
   @override

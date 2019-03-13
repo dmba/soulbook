@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:mobile/src/blocs/home/home.dart';
+import 'package:soulbook/src/blocs/home/home.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
   @override

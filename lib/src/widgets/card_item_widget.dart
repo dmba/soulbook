@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:mobile/src/model/menu_item.dart';
+import 'package:soulbook/src/model/menu_item.dart';
 
 class CardItemWidget extends StatelessWidget {
   const CardItemWidget({Key key, this.item}) : super(key: key);

@@ -1,1 +1,1 @@
-export 'package:mobile/src/widgets/loading_indicator_widget.dart';
+export 'package:soulbook/src/widgets/loading_indicator_widget.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/generated/i18n.dart';
-import 'package:mobile/src/di/injector.dart';
+import 'package:soulbook/generated/i18n.dart';
+import 'package:soulbook/src/di/injector.dart';
 
 mixin StateMixin {
   BuildContext get context;

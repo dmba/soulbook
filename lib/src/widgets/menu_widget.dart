@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile/src/model/menu_item.dart';
+import 'package:soulbook/src/model/menu_item.dart';
 
 class MenuWidget extends StatelessWidget {
   const MenuWidget({

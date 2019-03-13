@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/src/blocs/intro/intro.dart';
-import 'package:mobile/src/utils/state_mixin.dart';
+import 'package:soulbook/src/blocs/intro/intro.dart';
+import 'package:soulbook/src/utils/state_mixin.dart';
 
 class IntroPage extends StatefulWidget {
   IntroPage(this._bloc) : super();

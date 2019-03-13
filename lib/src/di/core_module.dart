@@ -1,12 +1,12 @@
-import 'package:mobile/src/blocs/auth/auth.dart';
-import 'package:mobile/src/blocs/home/home.dart';
-import 'package:mobile/src/blocs/intro/intro.dart';
-import 'package:mobile/src/blocs/login/login.dart';
-import 'package:mobile/src/di/module.dart';
-import 'package:mobile/src/repo/user_repo.dart';
+import 'package:soulbook/src/blocs/auth/auth.dart';
+import 'package:soulbook/src/blocs/home/home.dart';
+import 'package:soulbook/src/blocs/intro/intro.dart';
+import 'package:soulbook/src/blocs/login/login.dart';
+import 'package:soulbook/src/di/module.dart';
+import 'package:soulbook/src/repo/user_repo.dart';
 import 'package:kiwi/kiwi.dart';
 
-part 'package:mobile/src/di/core_module.g.dart';
+part 'package:soulbook/src/di/core_module.g.dart';
 
 abstract class CoreModule implements Module {
   const CoreModule();

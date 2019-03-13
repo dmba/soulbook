@@ -1,17 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:kiwi/kiwi.dart';
-import 'package:mobile/src/blocs/home/home.dart';
-import 'package:mobile/src/blocs/intro/intro.dart';
-import 'package:mobile/src/blocs/login/login.dart';
-import 'package:mobile/src/di/module.dart';
-import 'package:mobile/src/pages/home/home.dart';
-import 'package:mobile/src/pages/intro/intro.dart';
-import 'package:mobile/src/pages/login/auth.dart';
-import 'package:mobile/src/pages/login/login.dart';
-import 'package:mobile/src/pages/splash/splash.dart';
+import 'package:soulbook/src/blocs/home/home.dart';
+import 'package:soulbook/src/blocs/intro/intro.dart';
+import 'package:soulbook/src/blocs/login/login.dart';
+import 'package:soulbook/src/di/module.dart';
+import 'package:soulbook/src/pages/home/home.dart';
+import 'package:soulbook/src/pages/intro/intro.dart';
+import 'package:soulbook/src/pages/login/auth.dart';
+import 'package:soulbook/src/pages/login/login.dart';
+import 'package:soulbook/src/pages/splash/splash.dart';
 
-part 'package:mobile/src/di/ui_module.g.dart';
+part 'package:soulbook/src/di/ui_module.g.dart';
 
 abstract class UiModule implements Module {
   const UiModule();

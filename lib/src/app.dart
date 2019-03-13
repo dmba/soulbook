@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile/generated/i18n.dart';
-import 'package:mobile/src/blocs/auth/auth.dart';
-import 'package:mobile/src/pages/home/home.dart';
-import 'package:mobile/src/pages/intro/intro.dart';
-import 'package:mobile/src/pages/login/login.dart';
-import 'package:mobile/src/pages/routes.dart';
-import 'package:mobile/src/pages/splash/splash.dart';
-import 'package:mobile/src/utils/non_null_guard.dart';
-import 'package:mobile/src/utils/state_mixin.dart';
-import 'package:mobile/src/widgets/widgets.dart';
+import 'package:soulbook/generated/i18n.dart';
+import 'package:soulbook/src/blocs/auth/auth.dart';
+import 'package:soulbook/src/pages/home/home.dart';
+import 'package:soulbook/src/pages/intro/intro.dart';
+import 'package:soulbook/src/pages/login/login.dart';
+import 'package:soulbook/src/pages/routes.dart';
+import 'package:soulbook/src/pages/splash/splash.dart';
+import 'package:soulbook/src/utils/non_null_guard.dart';
+import 'package:soulbook/src/utils/state_mixin.dart';
+import 'package:soulbook/src/widgets/widgets.dart';
 
 class App extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:kiwi/kiwi.dart' as kiwi;
-import 'package:mobile/src/di/module.dart';
+import 'package:soulbook/src/di/module.dart';
 
 class Injector extends InheritedWidget {
   static Injector of(BuildContext context) {

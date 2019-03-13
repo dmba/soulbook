@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/src/di/injector.dart';
-import 'package:mobile/src/pages/home/home.dart';
-import 'package:mobile/src/pages/intro/intro.dart';
-import 'package:mobile/src/pages/login/login.dart';
+import 'package:soulbook/src/di/injector.dart';
+import 'package:soulbook/src/pages/home/home.dart';
+import 'package:soulbook/src/pages/intro/intro.dart';
+import 'package:soulbook/src/pages/login/login.dart';
 
 const HOME = '/home';
 const INTRO = '/intro';

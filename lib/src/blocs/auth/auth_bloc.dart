@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:mobile/src/blocs/auth/auth.dart';
-import 'package:mobile/src/repo/user_repo.dart';
+import 'package:soulbook/src/blocs/auth/auth.dart';
+import 'package:soulbook/src/repo/user_repo.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc(this._userRepo);

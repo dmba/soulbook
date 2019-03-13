@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile/src/blocs/home/home.dart';
-import 'package:mobile/src/model/menu_item.dart';
-import 'package:mobile/src/utils/state_mixin.dart';
-import 'package:mobile/src/widgets/card_item_widget.dart';
-import 'package:mobile/src/widgets/menu_widget.dart';
+import 'package:soulbook/src/blocs/home/home.dart';
+import 'package:soulbook/src/model/menu_item.dart';
+import 'package:soulbook/src/utils/state_mixin.dart';
+import 'package:soulbook/src/widgets/card_item_widget.dart';
+import 'package:soulbook/src/widgets/menu_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage(this._bloc) : super();

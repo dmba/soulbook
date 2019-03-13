@@ -1,1 +1,1 @@
-export 'package:mobile/src/pages/splash/splash_page.dart';
+export 'package:soulbook/src/pages/splash/splash_page.dart';

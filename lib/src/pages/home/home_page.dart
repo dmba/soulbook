@@ -32,35 +32,35 @@ class _HomePageState extends State<HomePage> with StateMixin {
       uuid.v1(),
       "Блок 1",
       "Знакомство",
-      "TASK_DETAILS",
+      "/detail",
       "assets/block1.png",
     ),
     ParagraphItem(
       uuid.v1(),
       "Блок 2",
       "В поисках внутренних ресурсов",
-      "TASK_DETAILS",
+      "/detail",
       "assets/block2.png",
     ),
     ParagraphItem(
       uuid.v1(),
       "Блок 3",
       "Архетипы внутренней семьи",
-      "TASK_DETAILS",
+      "/detail",
       "assets/block3.png",
     ),
     ParagraphItem(
       uuid.v1(),
       "Блок 4",
       "Счастливая Я",
-      "TASK_DETAILS",
+      "/detail",
       "assets/block4.png",
     ),
     ParagraphItem(
       uuid.v1(),
       "Блок 5",
       "Мир отношений",
-      "TASK_DETAILS",
+      "/detail",
       "assets/block5.png",
     ),
   ];
@@ -118,8 +118,17 @@ class _HomePageState extends State<HomePage> with StateMixin {
   Widget _buildItem(BuildContext context, int index) {
     return ParagraphCard(
       item: _items[index],
-      inFavorites: false,
-      onFavoriteButtonPressed: () {},
+      inFavorites: _items[index].isFavourite,
+      onFavoriteButtonPressed: (item) {
+        setState(() {
+          _items[index] = _items[index].copyWith(
+            isFavourite: !_items[index].isFavourite,
+          );
+        });
+      },
+      onTap: (item) {
+        Navigator.of(context).pushNamed(DETAIL);
+      },
     );
   }
 }

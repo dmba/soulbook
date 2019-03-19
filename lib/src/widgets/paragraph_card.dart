@@ -9,18 +9,20 @@ class ParagraphCard extends StatelessWidget {
     @required this.item,
     @required this.inFavorites,
     @required this.onFavoriteButtonPressed,
+    @required this.onTap,
   });
 
   final ParagraphItem item;
   final bool inFavorites;
-  final Function onFavoriteButtonPressed;
+  final void Function(ParagraphItem) onFavoriteButtonPressed;
+  final void Function(ParagraphItem) onTap;
 
   @override
   Widget build(BuildContext context) {
     RawMaterialButton _buildFavoriteButton() {
       return RawMaterialButton(
         constraints: const BoxConstraints(minWidth: 40.0, minHeight: 40.0),
-        onPressed: () => onFavoriteButtonPressed(item.id),
+        onPressed: () => onFavoriteButtonPressed(item),
         child: Icon(
           // Conditional expression:
           // show "favorite" icon or "favorite border" icon depending on widget.inFavorites:
@@ -33,11 +35,11 @@ class ParagraphCard extends StatelessWidget {
       );
     }
 
-    return GestureDetector(
-      onTap: _onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-        child: Card(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+      child: Card(
+        child:  InkWell(
+          onTap: () => onTap(item),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,11 +62,5 @@ class ParagraphCard extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _onTap() {
-//    navigator.push(MaterialPageRoute(
-//      builder: (context) => new DetailScreen(item, inFavorites),
-//    ));
   }
 }

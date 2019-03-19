@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:soulbook/src/blocs/login/login.dart';
 import 'package:soulbook/src/pages/login/auth.dart';
@@ -32,11 +34,11 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
   Widget _loginPage() {
     return Container(
       width: mediaQuery.size.width,
-      margin: const EdgeInsets.all(30.0),
+      margin: const EdgeInsets.all(10.0),
       child: Column(
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 120.0),
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
             child: Center(
               child: Text(
                 strings.title,
@@ -64,7 +66,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
           ),
           Container(
             width: mediaQuery.size.width,
-            margin: const EdgeInsets.only(top: 10.0),
+            margin: const EdgeInsets.only(top: 5.0),
             alignment: Alignment.center,
             decoration: const BoxDecoration(
               border: Border(
@@ -74,7 +76,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
                     style: BorderStyle.solid),
               ),
             ),
-            padding: const EdgeInsets.only(right: 10.0),
+            padding: const EdgeInsets.only(right: 5.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -110,7 +112,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
           ),
           Container(
             width: mediaQuery.size.width,
-            margin: const EdgeInsets.only(top: 10.0),
+            margin: const EdgeInsets.only(top: 5.0),
             alignment: Alignment.center,
             decoration: const BoxDecoration(
               border: Border(
@@ -159,7 +161,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
             ],
           ),
           Container(
-            margin: const EdgeInsets.only(top: 20.0),
+            margin: const EdgeInsets.only(top: 10.0),
             child: Row(
               children: <Widget>[
                 Expanded(
@@ -175,13 +177,13 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
           ),
           Container(
             width: mediaQuery.size.width,
-            margin: const EdgeInsets.only(top: 20.0),
+            margin: const EdgeInsets.only(top: 5.0),
             alignment: Alignment.center,
             child: Row(
               children: <Widget>[
                 Expanded(
                   child: Container(
-                    margin: const EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(4.0),
                     decoration: BoxDecoration(border: Border.all(width: 0.25)),
                   ),
                 ),
@@ -194,7 +196,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
                 ),
                 Expanded(
                   child: Container(
-                    margin: const EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(4.0),
                     decoration: BoxDecoration(border: Border.all(width: 0.25)),
                   ),
                 ),
@@ -202,7 +204,7 @@ class _LoginPageState extends State<LoginPage> with StateMixin {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 20.0),
+            margin: const EdgeInsets.only(top: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[

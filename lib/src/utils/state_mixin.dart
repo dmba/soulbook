@@ -12,4 +12,6 @@ mixin StateMixin {
   MediaQueryData get mediaQuery => MediaQuery.of(context);
 
   Injector get injector => Injector.of(context);
+
+  NavigatorState get navigator => Navigator.of(context);
 }

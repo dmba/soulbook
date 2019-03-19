@@ -1,16 +1,21 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:soulbook/src/blocs/home/home.dart';
+import 'package:soulbook/src/model/app_user.dart';
 import 'package:soulbook/src/model/menu_item.dart';
+import 'package:soulbook/src/pages/login/auth.dart';
+import 'package:soulbook/src/pages/routes.dart';
 import 'package:soulbook/src/utils/state_mixin.dart';
 import 'package:soulbook/src/widgets/menu_widget.dart';
 import 'package:soulbook/src/widgets/paragraph_card.dart';
 import 'package:uuid/uuid.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage(this._bloc) : super();
+  HomePage(this._bloc, this._auth) : super();
 
   final CounterBloc _bloc;
+  final Auth _auth;
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -19,6 +24,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with StateMixin {
   static final uuid = Uuid();
   ScrollController _scrollController;
+
+  var user = AppUser.empty();
 
   List<ParagraphItem> _items = <ParagraphItem>[
     ParagraphItem(
@@ -59,6 +66,20 @@ class _HomePageState extends State<HomePage> with StateMixin {
   ];
 
   @override
+  void initState() {
+    FirebaseAuth.instance.currentUser().then((fireUser) {
+      setState(() {
+        user = AppUser(
+          fireUser.displayName,
+          fireUser.email,
+          fireUser.photoUrl,
+        );
+      });
+    });
+    super.initState();
+  }
+
+  @override
   void dispose() {
     widget._bloc.dispose();
     super.dispose();
@@ -71,12 +92,14 @@ class _HomePageState extends State<HomePage> with StateMixin {
         title: Text(strings.title),
       ),
       drawer: MenuWidget(
-        accountName: "Dmytro Babiienko",
-        accountEmail: "dmytro.babiienko@gmail.com",
-        accountAvatar:
-            "https://lh6.googleusercontent.com/-DGh7XBoUXPA/AAAAAAAAAAI/AAAAAAAAABE/x4XAorr5s5o/s96-c/photo.jpg",
-        menuItems: _items,
-      ),
+          accountName: user.displayName,
+          accountEmail: user.email,
+          accountAvatar: user.photoUrl,
+          menuItems: _items,
+          onSignOut: () async {
+            await widget._auth.signOut();
+            navigator.pushReplacementNamed(LOGIN);
+          }),
       body: BlocBuilder<CounterEvent, CounterState>(
         bloc: widget._bloc,
         builder: _counterBuilder,

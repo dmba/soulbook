@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Auth {
@@ -18,5 +18,10 @@ class Auth {
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
+  }
+
+  Future<void> signOut() async {
+    await firebaseAuth.signOut();
+    await googleSignIn.signOut();
   }
 }

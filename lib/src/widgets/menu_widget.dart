@@ -14,7 +14,7 @@ class MenuWidget extends StatelessWidget {
   final String accountName;
   final String accountEmail;
   final String accountAvatar;
-  final List<MenuItem> menuItems;
+  final List<ParagraphItem> menuItems;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +37,12 @@ class MenuWidget extends StatelessWidget {
       ),
     ];
     _menuTiles.addAll(menuItems.map(_mapToListTile(context)));
+    _menuTiles.add(Divider());
+    _menuTiles.add(ListTile(
+      title: Text("Выход"),
+      leading: const Icon(Icons.arrow_back),
+      onTap: _signOut,
+    ));
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -46,11 +52,13 @@ class MenuWidget extends StatelessWidget {
   }
 
   _mapToListTile(BuildContext context) {
-    return (MenuItem item) => ListTile(
+    return (ParagraphItem item) => ListTile(
           title: Text(item.title),
           subtitle: Text(item.description),
-          leading: const Icon(Icons.chevron_right),
+          leading: const Icon(Icons.bookmark_border),
           onTap: () => Navigator.pushNamed(context, item.route),
         );
   }
+
+  void _signOut() {}
 }

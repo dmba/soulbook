@@ -17,6 +17,7 @@ dependencies:
   firebase_auth: ^0.6.6
   google_sign_in: ^3.2.4
   intro_slider: ^1.1.4
+  uuid: 2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +33,8 @@ flutter:
     - assets/intro0.png
     - assets/intro1.png
     - assets/intro2.png
+    - assets/block1.png
+    - assets/block2.png
+    - assets/block3.png
+    - assets/block4.png
+    - assets/block5.png

@@ -9,7 +9,7 @@ import 'package:soulbook/src/pages/routes.dart';
 import 'package:soulbook/src/pages/splash/splash.dart';
 import 'package:soulbook/src/utils/non_null_guard.dart';
 import 'package:soulbook/src/utils/state_mixin.dart';
-import 'package:soulbook/src/widgets/widgets.dart';
+import 'package:soulbook/src/widgets/loading_indicator_widget.dart';
 
 class App extends StatefulWidget {
   @override

@@ -7,6 +7,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   final UserRepo _userRepo;
 
+  static bool _firstStart = true;
+
   @override
   AuthState get initialState => AuthState.UNINITIALIZED;
 
@@ -15,6 +17,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     AuthState currentState,
     AuthEvent event,
   ) async* {
+    if (_firstStart) {
+      yield AuthState.FIRST_START;
+      _firstStart = false;
+      return;
+    }
+
     if (event is AppStarted) {
       final bool hasToken = await _userRepo.hasToken();
 

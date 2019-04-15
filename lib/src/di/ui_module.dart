@@ -5,6 +5,7 @@ import 'package:soulbook/src/blocs/home/home.dart';
 import 'package:soulbook/src/blocs/intro/intro.dart';
 import 'package:soulbook/src/blocs/login/login.dart';
 import 'package:soulbook/src/di/module.dart';
+import 'package:soulbook/src/pages/detail/detail.dart';
 import 'package:soulbook/src/pages/home/home.dart';
 import 'package:soulbook/src/pages/intro/intro.dart';
 import 'package:soulbook/src/pages/login/auth.dart';
@@ -37,5 +38,6 @@ abstract class UiModule implements Module {
   @Register.factory(IntroPage)
   @Register.factory(LoginPage)
   @Register.factory(SplashPage)
+  @Register.factory(DetailPage)
   void _configurePages();
 }
